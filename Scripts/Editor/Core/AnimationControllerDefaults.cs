@@ -8,7 +8,7 @@ namespace BrunoMikoski.AnimationSequencer
     public sealed class AnimationControllerDefaults : EditorDefaultResourceSingleton<AnimationControllerDefaults>
     {
         [SerializeField]
-        private CustomEase defaultEasing = CustomEase.InOutQuad;
+        private CustomEase defaultEasing = CustomEase.Unset;
         public CustomEase DefaultEasing => defaultEasing;
 
         [SerializeField]
