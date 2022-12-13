@@ -8,18 +8,18 @@ namespace BrunoMikoski.AnimationSequencer
     public sealed class AnchoredPositionMoveToRectTransformPositionDOTweenActionBase : AnchoredPositionMoveDOTweenActionBase
     {
         [SerializeField]
-        private RectTransform rectTransform;
+        private RectTransform targetRectTransform;
         public RectTransform RectTransform
         {
-            get => rectTransform;
-            set => rectTransform = value;
+            get => targetRectTransform;
+            set => targetRectTransform = value;
         }
 
         public override string DisplayName => "Move to RectTransform Anchored Position";
 
         protected override Vector2 GetPosition()
         {
-            return rectTransform.anchoredPosition;
+            return targetRectTransform.anchoredPosition;
         }
     }
 }
